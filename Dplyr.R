@@ -33,9 +33,15 @@ iris %>%
   summarise(nwifth = n()) %>%
   filter(nwifth > 12) -> selectForFilter
 
-x %>%
+iris %>%
   filter(Petal.Width %in% selectForFilter$Petal.Width) %>%
   select(Petal.Length, Petal.Width, Species) %>%
   arrange(Petal.Length) %>%
   distinct()
+
+iris %>%
+  count(Petal.Length) 
+
+iris %>%
+  count(Petal.Length, wt = Petal.Width) 
 
