@@ -34,5 +34,7 @@ iris %>%
   filter(nwifth > 12) -> selectForFilter
 
 x %>%
-  filter(Petal.Width %in% selectForFilter$Petal.Width)
+  filter(Petal.Width %in% selectForFilter$Petal.Width) %>%
+  select(Petal.Width, Species) %>%
+  distinct()
 
