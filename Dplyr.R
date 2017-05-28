@@ -31,4 +31,8 @@ iris %>%
 iris %>%
   group_by(Petal.Width) %>%
   summarise(nwifth = n()) %>%
-  filter(nwifth > 3)
+  filter(nwifth > 12) -> selectForFilter
+
+x %>%
+  filter(Petal.Width %in% selectForFilter$Petal.Width)
+
