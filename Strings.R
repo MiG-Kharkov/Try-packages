@@ -1,3 +1,5 @@
+# https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html
+# http://stringr.tidyverse.org/
 library(stringr)
 
 # не актуальна сечас - агалог ncahr
@@ -44,3 +46,6 @@ str_count(x, "[aeiou]")
 # stringr provides pattern matching functions to 
 # detect, locate, extract, match, replace, and split strings.
 
+# simple filter for selection
+iris %>% 
+  filter(str_detect(Species, "setosa"))
