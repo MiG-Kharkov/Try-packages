@@ -49,3 +49,4 @@ str_count(x, "[aeiou]")
 # simple filter for selection
 iris %>% 
   filter(str_detect(Species, "setosa"))
+
