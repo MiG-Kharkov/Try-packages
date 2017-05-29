@@ -2,7 +2,7 @@
 # http://stringr.tidyverse.org/
 library(stringr)
 
-# не актуальна сечас - агалог ncahr
+# не актуальна сечас - аналог ncahr
 str_length("abc")
 nchar("ABC")
 
